@@ -1,0 +1,738 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.photo {
+  flex-basis: calc(25% - 20px); /* 25% de largura para cada foto com espaçamento de 20px */
+  margin-bottom: 20px;
+}
+
+.photo img {
+  width: 100%;
+  height: auto;
+  margin-top: 8px;
+}
+
+.nome{
+  margin-left: 10px;
+  margin-top: 0px;
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;                
+}
+header {
+  padding: px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid #c2c2c2;
+  margin-top: 0px;
+  background-color: white;
+  justify-content: space-between;
+}
+.fecharcarrinho , .botaofechar{
+  background-color: transparent;
+  list-style-type: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: none;
+  position: relative;
+  color: #ffffff;
+
+  
+}
+
+.fecharcarrinho, .botaofechar button:hover {
+  color: #ffffff;
+  padding-bottom: 3px;
+ 
+}
+.botaofechar{
+ 
+  border: none;
+  color: white;
+  background-color: black;
+  border: 1px solid rgb(61, 61, 61);
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.total{
+  margin-top: 30px;
+}
+.logo {
+  margin-right: 20px;
+  margin-right: 50px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+.divcarrinho
+.imgcarrinho{
+  margin-top: 5px;
+}
+
+.pesquisa{
+  position: relative;
+  left: -50px; /* Altere isso para mover o ícone para a esquerda ou direita */
+  top: 30px; /* Altere isso para mover o ícone para cima ou para baixo */
+  }
+
+.foto{
+  margin-left: 800px;
+}
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li button {
+  color: #000000;
+  text-decoration: none;
+  font-size: 15px;
+  margin-left: 30px;
+  margin-top: 8px;
+  display: inline;
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+nav ul li button:hover {
+  color: #111111;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #000000;
+
+}
+.entrada{
+  display: inline-block;
+  margin-top: 9px;
+  margin-right: 20px;
+
+}
+.entrada2{
+  display: inline-block;
+  top: 130px;
+  left: 750px;
+  }
+
+.cadastrodeprodutos{
+  background-color: #484848;
+}
+.centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  flex-direction: column;
+  font-size: 20px;
+  margin-top: 0;
+  color: white;
+  overflow: auto; /* Adicione esta linha para permitir rolagem quando necessário */
+}
+
+.container {
+  display: flex;
+}
+
+.boxfem {
+  width: 25%;
+  box-sizing: border-box;
+  border: 1px solid #000;
+  padding: 10px;
+  float: left;
+}
+.remove-button {
+  background-color: #fffffffa;
+  color: #000000;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.add-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+
+  .produtobutton {
+    color: white;
+    background-color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  .removeitens {
+    color: white;
+    background-color: rgb(255, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+  .itemesp{
+    color: white;
+    background-color: rgb(255, 0, 0);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 15px;
+    margin-top: 5px;
+  }
+  .itemescolhido{
+    margin-top: 8px;
+  }
+  .boxmasc {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    min-width: 200px;
+    min-height: 450px; 
+    font-family: Verdana, sans-serif;
+  }
+  .boxbol {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-right: 20px;
+    min-width: 200px;
+    min-height: 450px; 
+    font-family: Verdana, sans-serif;
+  }
+  .imagem{
+    width: 100%;
+    height:100%;
+  }
+total
+  .overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1300px;
+    height: 450px;
+    background-color: rgb(255, 255, 255); /* Alterado para o valor 1, tornando o fundo opaco */
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+    display: none;
+    overflow: auto; /* Adicionando a propriedade overflow para permitir rolagem */
+  }
+  .content {
+    display: flex;
+  }
+  
+  
+  .photo {
+    flex: 1;
+    margin-right: 20px;
+  }
+  
+  .photo img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .info {
+    flex: 2;
+    color: #000000;
+    font-family:Verdana, sans-serif	;
+  }
+  
+  .info h2 {
+    font-size: 20px;
+    margin-top: 0;
+  }
+  
+  .info p {
+    font-size: 16px;
+  }
+  
+  .carrinho,.user,.pesquisa{
+    margin: 0;
+    border: none;
+    background: none;
+    padding: 0;
+    font-size: 30px;
+    margin-right: 10px;
+    display: inline-block;
+  }
+  .icons{
+    margin-left: 750px;
+  }
+
+  .adicionar {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+  
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  #closeOverlay{
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .divcarrinho {
+    position: fixed;
+    top: 50%;
+    right: 10px; /* Posiciona à direita com uma margem de 10px */
+    transform: translate(0, -50%);
+    width: 400px; /* Defina a largura desejada para a div do carrinho */
+    height: 650px;  /* Defina a altura desejada para a div do carrinho */
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 9999;
+    display: none;
+    overflow: auto;
+    border-radius: 20px;
+  }
+  
+  .imagem-carrinho {
+    height: 200px;
+    width: auto;
+  } 
+ 
+  .userDiv {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+  }
+  
+  
+  .conteudoUser {
+    text-align: center;
+    font-size: 20px;
+  }
+
+.hr{
+  margin-top: 30px;
+  color: #484848;
+}
+
+ 
+
+.botaoentrar{
+  color: white;
+  background-color: black;
+  border: 1px solid white;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+.textoinutil{
+  margin-top: 30px;
+}
+.botoesdiv{
+  margin-top: 20px;
+}
+
+.email-input {
+  position: relative;
+  display: inline-block;
+  width: 190px;
+}
+
+.senha{
+  width: 190px;
+}
+
+.email-input input[type="email"] {
+  padding: 10px;
+  border: none;
+  border-radius: 0;
+  border-bottom: 2px solid gray;
+  font-size: 16px;
+  width: 250px;
+  background-color: transparent;
+}
+
+.email-input input[type="email"] {
+  background-color: transparent;
+}
+
+.password-input{
+  margin-top: 8px;
+}
+
+#closeButton{
+  background-color: rgb(16, 16, 16);
+  color: white;
+  border-radius: 10px;
+  padding: 10px 20px;
+  border: none;
+}
+
+.nomepeca{
+  font-family: sans-serif
+}
+
+.botaoroupa{
+  border: none;
+  cursor: pointer;
+}
+
+.criar{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 10px 40px;
+  border: 1px solid rgb(255, 255, 255);
+  margin-top: px;
+}
+
+.senhaCriar{
+  margin-top: 5px;
+}
+.botaocadastro{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 10px 30px;
+  border: 1px solid white;
+  margin-top: 20px;
+}
+.linha p {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+hr
+.excluiritem {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.botaovoltar{
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+
+
+.n {
+  height: 10%;
+  margin: 0;
+}
+
+.gray-div {
+  background-color: gray;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.gray-div h1 {
+  color: white;
+}
+
+.vertical-text {
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  color: white;
+  font-size: 24px;
+  margin-right: 20px;
+} 
+ 
+
+
+.tit{
+  margin-top: -250px;
+}
+.sairconta{
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.imgcarrinho{
+  width: 200px;
+}
+
+#box .error {
+  color: red;
+}
+.tabelaprodutos {
+  text-align: center;
+  margin: 20px;
+}
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabela td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.tabelanome, .tabelapreco, .tabelaid {
+  text-align: left;
+}
+.cadastrodeprodutos
+.tabelanome {
+  width: 40%;
+}
+
+.tabelapreco {
+  width: 30%;
+}
+
+.tabelaid {
+  width: 30%;
+}
+#loginOverlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  background-color: white;
+  padding: 40px; /* Ajuste o valor do padding conforme necessário */
+  border-radius: 8px;
+  text-align: center;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#box .error {
+  color: red;
+}
+.login {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+  .errorrr {
+
+      color: red;
+  
+  }
+  #loginOverlay.credenciais-corretas {
+    display: none;
+    backdrop-filter: none;
+  }
+
+  .carrega {
+    background: none; /* Remove o fundo */
+    border: none; /* Remove as bordas */
+    font-size: 44px; /* Ajusta o tamanho da fonte para tornar o botão maior */
+    padding: 20px; /* Ajusta o espaçamento interno para aumentar o tamanho do botão */
+    cursor: pointer; /* Adiciona um cursor ao passar o mouse */
+}
+.remove{
+  background: none; /* Remove o fundo */
+  border: none; /* Remove as bordas */
+  font-size: 44px; /* Ajusta o tamanho da fonte para tornar o botão maior */
+  padding: 20px; /* Ajusta o espaçamento interno para aumentar o tamanho do botão */
+  cursor: pointer; /* Adiciona um cursor ao passar o mouse */
+}
+
+/* Estilo para o formulário com o ID "boxlog" dentro da div "login" */
+.login #boxlog {
+  text-align: left;
+}
+
+/* Estilo para o título dentro do formulário de login */
+.login #boxlog h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para os rótulos e inputs de E-mail e Senha */
+.login span, .login input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Estilo para a mensagem de erro */
+.login .error {
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Estilo para o botão de entrada (login) */
+.login .button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Estilo para a div com a classe "cadastro" */
+.cadastro {
+  width: 300px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Estilo para o formulário com o ID "boxlog" dentro da div "cadastro" */
+.cadastro #boxlog {
+  text-align: left;
+}
+
+/* Estilo para o título dentro do formulário de cadastro */
+.cadastro #boxlog h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+/* Estilo para os rótulos e inputs de Nome, E-mail, Senha e Confirmação de Senha */
+.cadastro span, .cadastro input {
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Estilo para o botão de cadastro */
+.cadastro .button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+
+/* PERFIL */
+
+.profile {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+#profile-container {
+  max-width: 800px;
+  margin: 50px auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  height: 500px;
+}
+
+#header {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#left-section {
+  float: left;
+  width: 40%;
+  text-align: center;
+  padding: 10px;
+}
+
+#user-photo {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ddd;
+  margin-bottom: 10px;
+}
+
+#change-photo-btn {
+  background-color: #000000;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  margin-left: -110px;
+  margin-right: 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#right-section {
+  float: right;
+  width: 40%;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.errormensage{
+  color: #ff0000;
+  font-size: 14px;
+  margin-top: 10px;
+}

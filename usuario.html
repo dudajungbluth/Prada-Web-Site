@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="Website Icon" type="png" href="css/imagens/pradalogo.png">
+  <title>PRADA | Roupas e acessorios</title>
+  <link rel="stylesheet" type="text/css" href="css/ProjetoPW.css">
+  <meta charset="UTF-8">
+  <script src="https://kit.fontawesome.com/e9ad9d0028.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <button onclick="pag()" class="nome"><h1>PRADA</h1></button>            
+    </div>
+    <nav>
+      <ul>
+        <li><button onclick="roupas()">DRESS UP</button></li> 
+        <li><button onclick="user()">LOGIN</button></li>
+        <li><button onclick="perfil()">PERFIL</button></li>
+        </li>
+      </ul>
+
+
+    </nav>
+  </header>
+  <div class="divcarrinho" id="carrinho">
+    <div class="conteudoCarrinho">
+      <button class="excluir" onclick="removerItem()">Excluir item</button>
+      <button class="fecharcarrinho" onclick="fecharCarrinho()">Fechar</button>
+    </div>
+  </div>
+
+  <div class="login">
+  
+    <form id="boxlog">
+      <h1>Faça o login da sua conta para aglizar seu pagamento!</h1>
+
+
+      <span>E-mail</span>
+      <input id="email" name="email" class="text" type="email">
+  
+      <span>Senha</span>
+      <input id="password" name="password" class="text" type="password">
+
+      <div class="error"></div>
+  
+      <button class="button">Entrar</button>
+
+  </form>
+  </div>
+
+
+  <div class="cadastro">
+  
+    <form id="boxlog">
+      <h1>Não possui uma conta? Cadastro de usuário</h1>
+      
+      <span>Nome</span>
+      <input id="name" name="name" class="text" type="text">
+
+      <span>E-mail</span>
+      <input id="email" name="email" class="text" type="email">
+  
+      <span>Senha</span>
+      <input id="password" name="password" class="text" type="password">
+
+      <span>Confirmação de senha</span>
+      <input id="confirm" name="confirm" class="text" type="password">
+  
+      <div class="error"></div>
+  
+      <button class="button">Cadastrar</button>
+
+  </form>
+  </div>
+  
+ 
+ 
+ 
+  <script src="js/contas.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="Website Icon" type="png" href="css/imagens/pradalogo.png">
+  <title>PRADA | Roupas e acessorios</title>
+  <link rel="stylesheet" type="text/css" href="css/ProjetoPW.css">
+  <script src="https://kit.fontawesome.com/e9ad9d0028.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <button onclick="pag()" class="nome"><h1>PRADA</h1></button>            
+    </div>
+    <nav>
+      <ul>
+        <li><button onclick="roupas()">DRESS UP</button></li> 
+        <li><button onclick="user()">LOGIN</button></li>
+        <li><button onclick="perfil()">PERFIL</button></li>
+ 
+        <li>
+          <div class="icons">
+            <button class="carrinho" onclick="abrirCarrinho()"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button>
+        <!--<button class="pesquisa"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button> -->
+         <!--<button class="user"><i class="fa-solid fa-user" style="color: #000000;"></i></button> -->   
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="divcarrinho" id="carrinho">
+    <div class="conteudoCarrinho">
+      
+      <button class="fecharcarrinho" onclick="fecharCarrinho()">Fechar</button>
+    </div>
+  </div>
+
+
+
+  
+ 
+
+  <div class="gallery">
+    <div class="photo">
+      <img src="css/imagens/entrada2.png" alt="Foto 1">
+    </div>
+    <div class="photo">
+      <img src="css/imagens/entrada3.png" alt="Foto 2">
+    </div>
+    <div class="photo">
+      <img src="css/imagens/entrada4.png" alt="Foto 3">
+    </div>
+    
+  </div>
+
+   
+<!--
+  <div class="n">
+
+    <div class="gray-div">
+      <h2 class="vertical-text">Pradasphere News</h2>
+      <img src="news.jpg" alt="Imagem" width="1050">
+      <h1>SS 2024 Menswear</h1>
+      <button>Veja mais</button>
+  </div>
+    
+  </div> -->
+ 
+  <script src="js/index.js" async></script>
+</body>
+</html>
+
+
