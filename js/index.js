@@ -18,7 +18,7 @@ function fecharCarrinho() {
   var carrinhoDiv = document.getElementById("carrinho");
   carrinhoDiv.style.display = "none";
 }
-
+// oi 
 
 // PROJETO PW PART 2
 
