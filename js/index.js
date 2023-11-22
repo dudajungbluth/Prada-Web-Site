@@ -18,7 +18,7 @@ function fecharCarrinho() {
   var carrinhoDiv = document.getElementById("carrinho");
   carrinhoDiv.style.display = "none";
 }
-// oi 
+
 
 // PROJETO PW PART 2
 
@@ -162,8 +162,6 @@ function atualizarCarrinho() {
 // PESQUISAR PEÇA
 
 const input = document.querySelector('#productName');
-
-
 input.addEventListener('input', async () => {
     const text = input.value;
     console.log('Valor digitado:', text);

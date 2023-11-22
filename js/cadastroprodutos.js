@@ -36,7 +36,7 @@ var remove = document.querySelector('.removeitens')
 
   let form = document.querySelector(".formulario");
   let tabela = document.querySelector('.tabela')
-  let recarrega = document.querySelector('.carrega')
+  let recarrega = document.querySelector('.carregas')
 
   form.addEventListener('submit', async(e)=>{
   e.preventDefault();
@@ -71,12 +71,6 @@ var remove = document.querySelector('.removeitens')
   document.getElementById('remove').addEventListener('click', async () => {
     // Obter o valor do input
     let productId = document.getElementById('inputId').value;
-
-    // Verificar se o ID foi inserido
-    if (!productId) {
-        alert("Por favor, insira o ID do produto.");
-        return;
-    }
 
     // Enviar o ID para o PHP via GET
     let data = await fetch(`deleta-produtos.php?id=${productId}`).then(res => res.json());

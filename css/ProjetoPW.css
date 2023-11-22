@@ -127,7 +127,8 @@ nav ul li button:hover {
   }
 
 .cadastrodeprodutos{
-  background-color: #484848;
+  background-color: #ffffff;
+  
 }
 .centre {
   display: flex;
@@ -489,7 +490,10 @@ hr
 
 .tit{
   margin-top: -250px;
+  font-family: sans-serif
+  
 }
+
 .sairconta{
   background-color: black;
   color: white;
@@ -583,7 +587,7 @@ hr
     backdrop-filter: none;
   }
 
-  .carrega {
+  .carregas {
     background: none; /* Remove o fundo */
     border: none; /* Remove as bordas */
     font-size: 44px; /* Ajusta o tamanho da fonte para tornar o botão maior */
@@ -631,7 +635,10 @@ hr
   padding: 10px 20px;
   cursor: pointer;
 }
-
+#inputId {
+  border: none;
+  background-color: transparent;
+}
 /* Estilo para a div com a classe "cadastro" */
 .cadastro {
   width: 300px;
@@ -722,7 +729,7 @@ hr
   margin-top: 10px;
   border-radius: 5px;
 }
-
+tit
 #right-section {
   float: right;
   width: 40%;
@@ -735,4 +742,101 @@ hr
   color: #ff0000;
   font-size: 14px;
   margin-top: 10px;
+}
+
+/* CADASTRO DE PRODUTOS */
+   .cadastrodeprodutos {
+      font-family: sans-serif;
+      color: #000000;
+    }
+
+    .centre {
+      text-align: center;
+    }
+
+    .tit {
+      color: #000000;
+    }
+
+    .formulario {
+      display: inline-block;
+      text-align: left;
+    }
+
+    .formulario p {
+      color: #000000;
+    }
+
+    .nomeprod,
+    .precoprod,
+    .imagemprod {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    .produtobutton {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #remove {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .tabelaprodutos {
+      margin-top: 20px;
+    }
+
+    .tabelaprodutos h1 {
+      color: #000000;
+    }
+
+    .tabela {
+      width: 100%;
+      border-collapse: collapse;
+      
+      margin-top: 10px;
+    }
+
+    .tabela th,
+    .tabela td {
+      border: 1px solid #000000;
+      padding: 8px;
+      text-align: left;
+    }
+   
+
+    .carrega {
+      background-color: #000000;
+      color: #ffffff;
+      padding: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .tabelanome, .tabelapreco , .tabelaid {
+      border: 1px solid #000000;
+      padding: 8px;
+      text-align: left;
+      font-family: sans-serif; /* Adicione a fonte desejada */
+      color: #000000; /* Cor preta */
+    }
+    
+    .delete-button {
+      cursor: pointer;
+      color: red; /* Cor do botão de remover (você pode ajustar conforme necessário) */
+    }
+#inputId{
+  width: 300px; /* Você pode ajustar a largura conforme necessário */
+  height: 40px; /* Você pode ajustar a altura conforme necessário */
+  padding: 8px;
+  margin-bottom: 10px;
 }
