@@ -23,7 +23,9 @@ alterarTextoDoBotao();
 const form = document.querySelector('.formphoto');
 const btn = document.querySelector('#change-photo-btn');
 const error = document.querySelector('.errormensage');
-const imgElement = document.getElementById("user-photo");
+const divImgElement = document.querySelector("#user-photo");
+const imgElement = document.createElement('img');
+divImgElement.appendChild(imgElement);
 
 
 fetch('session.php').then(async res => {
