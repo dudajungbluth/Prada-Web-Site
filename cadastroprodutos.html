@@ -32,18 +32,18 @@
  
 </div>
 
- <div class="centre">
+ 
     <h1 class="tit"> Bem vindo gerente da loja de roupas Prada, cadastre novos pordutos aqui:</h1>
-    <p>Informe o nome da peça, o preço e a imagem ilustrativa da peça</p> 
+    <p class="subtitle">Informe o nome da peça, o preço e a imagem ilustrativa da peça</p> 
     <form class="formulario"> 
-      <p>Nome:</p>
-      <input name="nome" type="text" class="nomeprod" required><br><br>
+     
+      <input name="nome" type="text" class="nomeprod" required placeholder="Nome do Produto"><br><br>
   
-      <p>Preço:</p>
-      <input name="preco" type="number" class="precoprod" step="0.01" required><br><br>
+      
+      <input name="preco" type="number" class="precoprod" step="0.01" required placeholder="Preço do Produto"><br><br>
   
-      <p>URL da imagem:</p>
-      <input name="imagem" class="imagemprod" required><br><br>
+      
+      <input name="imagem" class="imagemprod" required placeholder="URL do Produto"><br><br>
       
       <div class="error"></div>
       
@@ -53,10 +53,11 @@
    
     </form>
 
+    <div class="excluir-produto">
     <p>Excluir produto com id:</p>
     <input type="text" id="inputId" placeholder="Insira o ID do produto">
-    <button id="remove"><i class="fa-solid fa-trash" style="color: #ffffff;"></i></button>
-    
+    <button id="remove"><i class="fa-regular fa-trash-can" style="color: #000000;"></i></button>
+  </div>
 
 <div class="tabelaprodutos">
   
@@ -71,7 +72,7 @@
 
   
     
- </div>  
+  
    
  
   <script src="js/cadastroprodutos.js" async></script>

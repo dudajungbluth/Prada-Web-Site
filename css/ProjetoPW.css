@@ -134,11 +134,11 @@ nav ul li button:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  
   text-align: center;
   flex-direction: column;
   font-size: 20px;
-  margin-top: 0;
+
   color: white;
   overflow: auto; /* Adicione esta linha para permitir rolagem quando necessário */
 }
@@ -489,10 +489,16 @@ hr
 
 
 .tit{
-  margin-top: -250px;
-  font-family: sans-serif
-  
+  font-family: sans-serif;
+  font-size: 25px;
+  text-align: center;
 }
+.subtitle{
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 20px;
+}
+
 
 .sairconta{
   background-color: black;
@@ -594,13 +600,7 @@ hr
     padding: 20px; /* Ajusta o espaçamento interno para aumentar o tamanho do botão */
     cursor: pointer; /* Adiciona um cursor ao passar o mouse */
 }
-.remove{
-  background: none; /* Remove o fundo */
-  border: none; /* Remove as bordas */
-  font-size: 44px; /* Ajusta o tamanho da fonte para tornar o botão maior */
-  padding: 20px; /* Ajusta o espaçamento interno para aumentar o tamanho do botão */
-  cursor: pointer; /* Adiciona um cursor ao passar o mouse */
-}
+
 
 /* Estilo para o formulário com o ID "boxlog" dentro da div "login" */
 .login #boxlog {
@@ -729,7 +729,7 @@ hr
   margin-top: 10px;
   border-radius: 5px;
 }
-tit
+
 #right-section {
   float: right;
   width: 40%;
@@ -749,31 +749,39 @@ tit
       font-family: sans-serif;
       color: #000000;
     }
-
-    .centre {
-      text-align: center;
-    }
-
     .tit {
       color: #000000;
     }
 
     .formulario {
-      display: inline-block;
-      text-align: left;
-    }
-
-    .formulario p {
-      color: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
     .nomeprod,
     .precoprod,
     .imagemprod {
-      width: 100%;
-      padding: 8px;
+      display: flex;
+      width: 30%;
+      align-items: center;
+      padding: 5px;
       margin-bottom: 10px;
+      justify-content: center;
+      background: transparent;
+      border-radius: 10px;
+      border: solid 2px black;
+      color: black;
+      height: 20px;
     }
+    .excluir-produto{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 2%;
+    }
+   
 
     .produtobutton {
       background-color: #000000;
@@ -784,11 +792,14 @@ tit
     }
 
     #remove {
-      background-color: #000000;
-      color: #ffffff;
       padding: 5px;
       border: none;
       cursor: pointer;
+      font-size: 35px;
+      padding: 20px; 
+      background-color: transparent;
+      
+
     }
 
     .tabelaprodutos {
@@ -835,8 +846,16 @@ tit
       color: red; /* Cor do botão de remover (você pode ajustar conforme necessário) */
     }
 #inputId{
-  width: 300px; /* Você pode ajustar a largura conforme necessário */
-  height: 40px; /* Você pode ajustar a altura conforme necessário */
-  padding: 8px;
-  margin-bottom: 10px;
+  display: flex;
+      width: 30%;
+      align-items: center;
+      padding: 5px;
+      margin-bottom: 10px;
+      justify-content: center;
+      background: transparent;
+      border-radius: 10px;
+      border: solid 2px black;
+      color: black;
+      height: 20px;
+  
 }
