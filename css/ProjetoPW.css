@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -8,6 +9,7 @@
   flex-basis: calc(25% - 20px); /* 25% de largura para cada foto com espaçamento de 20px */
   margin-bottom: 20px;
 }
+
 
 .photo img {
   width: 100%;
@@ -145,14 +147,25 @@ nav ul li button:hover {
 
 .container {
   display: flex;
+  
 }
 
 .boxfem {
   width: 25%;
   box-sizing: border-box;
   border: 1px solid #000;
-  padding: 10px;
-  float: left;
+  margin-top: 2%;
+  margin-left: 5%;
+  text-align: center;
+  padding: 20px;
+  
+}
+.conteiner{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
 }
 .remove-button {
   background-color: #fffffffa;
@@ -163,6 +176,9 @@ nav ul li button:hover {
   cursor: pointer;
   font-size: 14px;
   transition: background-color 0.3s ease;
+}
+.search-icon i{
+  padding: 10px;
 }
 
 .add-button {
@@ -578,10 +594,12 @@ hr
   width: 300px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: transparent;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
+  margin-top: 20px;
+  margin-left: 20%;
 }
   .errorrr {
 
@@ -611,12 +629,23 @@ hr
 .login #boxlog h1 {
   font-size: 18px;
   margin-bottom: 20px;
+  font-family: 'Raleway', sans-serif;
 }
 
 /* Estilo para os rótulos e inputs de E-mail e Senha */
-.login span, .login input {
+#boxlog label  {
   display: block;
   margin-bottom: 10px;
+  font-size: 17px;
+  font-family: 'Raleway', sans-serif;
+}
+#boxlog input[type="text"],input[type="email"],input[type="password"]{
+  display: block;
+  margin-bottom: 10px;
+  background-color: transparent;
+  border: #000 1px solid;
+  padding: 5px;
+  
 }
 
 /* Estilo para a mensagem de erro */
@@ -628,7 +657,7 @@ hr
 
 /* Estilo para o botão de entrada (login) */
 .login .button {
-  background-color: #007bff;
+  background-color: black;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -644,10 +673,12 @@ hr
   width: 300px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #f2f2f2;
+  background-color: transparent;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
+  font-family: 'Raleway', sans-serif;
+  margin-right: 20%;
 }
 
 /* Estilo para o formulário com o ID "boxlog" dentro da div "cadastro" */
@@ -669,7 +700,7 @@ hr
 
 /* Estilo para o botão de cadastro */
 .cadastro .button {
-  background-color: #28a745;
+  background-color: black;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -704,19 +735,22 @@ hr
 }
 
 #left-section {
+  display: flex;
   float: left;
   width: 40%;
   text-align: center;
   padding: 10px;
+  justify-content: space-between;
 }
 
 #user-photo {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  background-color: #ddd;
+  background-color: #ffffff;
   margin-bottom: 10px;
 }
+
 
 #change-photo-btn {
   background-color: #000000;
@@ -724,11 +758,34 @@ hr
   padding: 8px 12px;
   border: none;
   cursor: pointer;
-  margin-left: -110px;
-  margin-right: 20px;
+
   margin-top: 10px;
   border-radius: 5px;
 }
+.formphoto{
+  margin-left: 20%;
+  text-align: justify;
+}
+.formphoto input[type="file"]{
+  border: #111111 solid 2px;
+  border-radius: 10px;
+  padding: 5px;
+}
+.logout{
+  background-color: #000000;
+  color: #fff;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+#user{
+  font-size: 20px;
+  font-weight: bold;
+}
+
 
 #right-section {
   float: right;
@@ -737,13 +794,18 @@ hr
   padding: 10px;
   margin-top: 20px;
 }
+.shopping h1{
+  font-size: 19px;
+}
 
 .errormensage{
   color: #ff0000;
   font-size: 14px;
   margin-top: 10px;
 }
-
+.inp_pesquisa{
+  font-family: sans-serif;
+}
 /* CADASTRO DE PRODUTOS */
    .cadastrodeprodutos {
       font-family: sans-serif;
@@ -859,3 +921,18 @@ hr
       height: 20px;
   
 }
+
+ .small-photo {
+      display: flex;
+      
+      width: 120px; /* Escolha a largura desejada */
+      height: auto; /* Mantém a proporção original da imagem ajustando automaticamente a altura */
+      /* Ou se você quiser definir uma altura específica, substitua 'auto' pelo valor desejado */
+      border-radius: 120px;
+
+  }
+  .mensage{
+    color: #00c22d;
+    opacity: 1; /* Garante que a opacidade inicial é 1 (totalmente visível) */
+    transition: opacity 1s; /* Adiciona a transição de opacidade */
+  }

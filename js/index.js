@@ -20,6 +20,8 @@ function fecharCarrinho() {
 }
 
 
+
+
 // PROJETO PW PART 2
 
 window.addEventListener('DOMContentLoaded', async() => {

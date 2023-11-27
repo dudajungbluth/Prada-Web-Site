@@ -30,13 +30,16 @@ var carrinhoDiv = document.getElementById("carrinho");
 var tabeladiv = document.querySelector('.tabelaprodutos')
 var remove = document.querySelector('.removeitens')
 
+
+
 // PROJETO PW PART 2 XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-
-
 
   let form = document.querySelector(".formulario");
   let tabela = document.querySelector('.tabela')
   let recarrega = document.querySelector('.carregas')
+  let mns = document.querySelector('.mensagem');
+  let mensgid = document.querySelector('.mensag');
+  let inputId = document.querySelector('#inputId');
 
   form.addEventListener('submit', async(e)=>{
   e.preventDefault();
@@ -47,7 +50,13 @@ var remove = document.querySelector('.removeitens')
   }).then(res => res.json());                   
   console.log(data);
 
+  if(data.status == "sucesso"){
+    mns.innerHTML = data.message
+  }
+
   });
+
+  
   
   recarrega.addEventListener('click', async () => {
     let produtos = await fetch('tabelaprodutos.php').then(res => res.json());
@@ -68,6 +77,10 @@ var remove = document.querySelector('.removeitens')
     });
   });
   
+
+  // DELETA PRODUTOS 
+
+  
   document.getElementById('remove').addEventListener('click', async () => {
     // Obter o valor do input
     let productId = document.getElementById('inputId').value;
@@ -75,6 +88,14 @@ var remove = document.querySelector('.removeitens')
     // Enviar o ID para o PHP via GET
     let data = await fetch(`deleta-produtos.php?id=${productId}`).then(res => res.json());
     console.log(data);
+    
+    if(data.error){
+      mensgid.innerHTML = data.error;
+    }
+    else{
+      mensgid.innerHTML = data.success;
+      inputId = ''
+    }
 });
 
 

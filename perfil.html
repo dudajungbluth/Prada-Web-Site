@@ -19,9 +19,7 @@
         <li><button onclick="perfil()">PERFIL</button></li>
  
           <div class="icons">
-           <!--<button class="carrinho" onclick="abrirCarrinho()"><i class="fa-solid fa-cart-shopping" style="color: #000000;"></i></button> -->
-        <!--<button class="pesquisa"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button> -->
-         <!--<button class="user"><i class="fa-solid fa-user" style="color: #000000;"></i></button> -->   
+ 
           </div>
         </li>
       </ul>
@@ -39,16 +37,17 @@
             
             <form class="formphoto">
                 <p id="user"></p>
-                <input type="file" name="foto">
+                <input type="file" name="foto" class="input-file">
                 <input id="change-photo-btn" type="submit"><br>
                 <div class="errormensage"></div>
+                <div class="mensage"></div>
                 <button class="logout">Sair da conta</button>
             </form>
           
         </div>
         
         <div id="right-section">
-          <div>Minhas compras:</div>
+          <div class="shopping"><h1>Minhas compras:</h1></div>
         </div>
       </div>
       

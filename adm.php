@@ -2,6 +2,14 @@
 
 require "conection.php";
 
+
+// JS QUE CHAMAM ESSE PHP: 
+
+// cadastroprodutos.js (parte do adm tbm)
+
+
+
+
 $stmt = $conn->query('SELECT * FROM admin_xppd');
 
 $adm = array();

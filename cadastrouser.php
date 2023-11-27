@@ -1,8 +1,13 @@
 <?php
 
+// CADASTRO DE NOVO USUARIO
+
 require "conection.php";
 
   
+// JS QUE CHAMAM ESSE PHP: 
+
+// contas.js
 
 $output = [];
 
@@ -10,25 +15,33 @@ $output = [];
 
 // valida campos
 $output = validate();
-if ($output["status"] == "erro"){
+if ($output["status"] == "erro"){   // Devolve a mensagem pro JS
     echo json_encode($output);
     exit;
 }
 
 $name = $_POST["name"];
 $email = $_POST["email"];
+
 // criptografa senha
 $password = password_hash($_POST["password"], PASSWORD_DEFAULT/*verica se a senha é padrão*/);
 
-$query = "SELECT * FROM usuarios WHERE email_user = ?" ;
+$query = "SELECT * FROM usuarios WHERE email_user = ?" ;  // Requisição pro BD
 $stmt = $conn->prepare($query);
 $stmt->execute([$email]);
-if($stmt->rowCount() > 0){
+
+
+if($stmt->rowCount() > 0){  // Se ele achou um email igual no BD ele retorna a mensagem 
     $response["status"] = "erro";
     $response["message"]= "conta ja cadastradada!";
     echo json_encode($response);
     exit;
 }
+
+// rowCount()  é uma função em PHP que é usada para obter o número de 
+//linhas afetadas por uma operação de banco de dados, como uma instrução SELECT, INSERT, 
+
+
 
 // insere usuário
 $sql = "INSERT INTO usuarios (nome_user, email_user,senha_user) VALUES (?, ?, ?)";
@@ -40,6 +53,8 @@ $output["message"] = "Usuário cadastrado com sucesso.";
 echo json_encode($output);
 exit;
 
+
+// Função de validar se todos os campos foram preenchidos.
 function validate(){
     $response = [];
     $response["status"] = "erro";
@@ -56,6 +71,7 @@ function validate(){
         $response["message"] = "Campo email deve estar presente.";
         $response["field"] = "email";
     }
+    
     // valida email
     // https://www.php.net/manual/pt_BR/filter.examples.validation.php
     elseif (!filter_var($_POST["email"], FILTER_VALIDATE_EMAIL)){
@@ -72,9 +88,7 @@ function validate(){
     }
     else {
         $response["status"] = "sucesso";
-        // START na sessao
-        session_start();
-        $_SESSION["userlog"] = $_POST["email"];
+
     }
    
     return $response;

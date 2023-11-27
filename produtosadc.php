@@ -1,9 +1,14 @@
 <?php
 
 require "conection.php";
-header("Content-Type: application/json");
+
+// JS QUE CHAMAM ESSE PHP: 
+
+// cadastroprodutos.js
 
 
+
+// CADASTRO DE PRODUTOS
 
 $nomeprod = $_POST["nome"];
 $precoprod = $_POST["preco"];

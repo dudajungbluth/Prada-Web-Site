@@ -2,6 +2,14 @@
 require "conection.php";
 
 
+// JS QUE CHAMAM ESSE PHP: 
+
+// index.js
+
+
+
+// MOSTRA OS PRODUTOS NO HTML
+
 $sql = "SELECT nome_prod, preco_prod, url_prod FROM produtos";
 
 $result = $conn->query($sql);

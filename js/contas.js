@@ -35,6 +35,8 @@ var error = document.querySelector('.cadastro .error');
 var carrinhoDiv = document.getElementById("carrinho");
 
 
+
+
 // PROJETO PW PART 2:
 
 // cadastro

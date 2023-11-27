@@ -3,9 +3,18 @@
 require "conection.php";
 session_start();
 
-$validate = validate_person();
+
+// JS QUE CHAMAM ESSE PHP: 
+
+// contas.js
+
+
+
+
+$validate = validate_person();  // Primeiro chama a função de validar campos
+
 if($validate["status"]=="erro") {
-    echo json_encode($validate);
+    echo json_encode($validate);    
     exit;
 }
 
@@ -17,16 +26,16 @@ $stmt = $conn->prepare($query);
 $stmt->execute([$email]);
 
 if($stmt->rowCount() == 0){
-    // coloca coisa que o usuario nao existe
+    // Se o rowCount retornou 0 significa que nao achou nenhuma conta com o email
     $response["status"] = "erro";
     $response["message"] = "Conta não cadastrada";
     echo json_encode($response);
     exit;
 }
 
-$user = $stmt->fetch();
+$user = $stmt->fetch(); // user recebe a consulta ao BD
 
-if (!password_verify($password, $user["senha_user"])) {
+if (!password_verify($password, $user["senha_user"])) { // Transforma a hash para senha 
     $response["status"] = "erro";
     $response["message"] = "Senha incorreta";
     echo json_encode($response);
@@ -34,14 +43,19 @@ if (!password_verify($password, $user["senha_user"])) {
 }
 
 
+
 $response["status"] = "sucesso";
 $response["message"]="Bem vindo, logado com sucesso";
 
+// SESSÃO
 
 $_SESSION["user"] = [
     "email" => $user["email_user"],
     "nome" => $user["nome_user"],
+    "foto" => $user["img_user"],
 ];
+
+// RETORNA A SESSÃO 
 
 echo json_encode([
     "status" => "success",
