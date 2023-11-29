@@ -18,6 +18,11 @@ function fecharCarrinho() {
   var carrinhoDiv = document.getElementById("carrinho");
   carrinhoDiv.style.display = "none";
 }
+function finalizarpagam(){
+  if(produtosCarrinho.length>0){
+    window.location.href = "pagamento.html";
+  }
+}
 
 
 
@@ -158,7 +163,7 @@ function atualizarCarrinho() {
     });
   }
   
-  carrinhoDiv.insertAdjacentHTML('beforeend', `<hr class="hr"><p class='total'>Subtotal:  R$${total}</p><button class="botaofechar" onclick="fecharCarrinho()">FECHAR</button><button class="botaofechar" onclick="fecharCarrinho()">FiNALIZAR</button>`);
+  carrinhoDiv.insertAdjacentHTML('beforeend', `<hr class="hr"><p class='total'>Subtotal:  R$${total}</p><button class="botaofechar" onclick="fecharCarrinho()">FECHAR</button><button class="botaofechar" onclick="finalizarpagam()">FiNALIZAR</button>`);
 }  
 
 // PESQUISAR PEÇA

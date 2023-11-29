@@ -763,7 +763,7 @@ hr
   border-radius: 5px;
 }
 .formphoto{
-  margin-left: 20%;
+  
   text-align: justify;
 }
 .formphoto input[type="file"]{
@@ -777,8 +777,9 @@ hr
   padding: 8px 12px;
   border: none;
   cursor: pointer;
-  margin-top: 10px;
+  margin-top: 10%;
   border-radius: 5px;
+  width: 40%;
 }
 
 #user{
@@ -924,7 +925,6 @@ hr
 
  .small-photo {
       display: flex;
-      
       width: 120px; /* Escolha a largura desejada */
       height: auto; /* Mantém a proporção original da imagem ajustando automaticamente a altura */
       /* Ou se você quiser definir uma altura específica, substitua 'auto' pelo valor desejado */
@@ -935,4 +935,45 @@ hr
     color: #00c22d;
     opacity: 1; /* Garante que a opacidade inicial é 1 (totalmente visível) */
     transition: opacity 1s; /* Adiciona a transição de opacidade */
+  }
+
+  .newName{
+    display: flex;
+    width: 95%;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    justify-content: center;
+    background: transparent;
+    border-radius: 10px;
+    border: solid 2px black;
+    color: black;
+    height: 20px;
+
+  }
+  .trocadenome h1{
+    font-size: 18px;
+  }
+  .trocadenome{
+    text-align: justify;
+  }
+  .trocanome{
+    background-color: #000000;
+      color: #ffffff;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 10px;
+  }
+  .container-photo{
+    margin-left: 20%;
+    text-align: justify;
+    display: flex;
+    
+  
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    justify-content: space-between;
   }

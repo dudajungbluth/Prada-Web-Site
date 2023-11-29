@@ -1,0 +1,102 @@
+/* Estilos para o corpo do documento */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Estilos para o cabeçalho */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  /* Estilos para a seção principal */
+  main {
+    padding: 20px;
+  }
+  
+  /* Estilos para os títulos das seções */
+  h2 {
+    color: #333;
+  }
+  
+  /* Estilos para o formulário de pagamento */
+  form {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #555;
+  }
+  
+  /* Estilos para o rodapé */
+  footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+ /* Restante do seu CSS... */
+
+/* Estilos para a tabela */
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.tabela td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+.tabelanome {
+  text-align: left;
+}
+.tabelapreco{
+  text-align: left;
+}
+.tabelaquant{
+  text-align: left;
+}
+
+.tabelanome {
+  width: 40%;
+}
+
+.tabelapreco {
+  width: 30%;
+}
+
+.tabelaquant {
+  width: 30%;
+}
+
+/* Restante do seu CSS... */

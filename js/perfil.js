@@ -10,6 +10,8 @@ function pag() {
   function perfil() {
     window.location.href = "perfil.html";
   }
+
+
   // FUNÇÃOZINHA PARA TROCAR O TEXTO DO BOTÃO
   function alterarTextoDoBotao() {
     var botao = document.getElementById("change-photo-btn");
@@ -31,7 +33,18 @@ const mensage = document.querySelector('.mensage');
 
 
 
-fetch('session.php').then(async res => {
+const button = document.querySelector('.logout');
+button.addEventListener('click', () => {
+    fetch('logout.php');
+    location.href = 'usuario.html';
+    
+});
+
+
+async function mostradados() {
+
+
+  fetch('session.php').then(async res => {
     const data = await res.json();
 
     if (data.status == 'error') {
@@ -51,16 +64,13 @@ fetch('session.php').then(async res => {
 
 });
 
+}
 
-const button = document.querySelector('.logout');
-button.addEventListener('click', () => {
-    fetch('logout.php');
-    location.href = 'usuario.html';
-    
-});
+mostradados();
 
 
-window.addEventListener('DOMContentLoaded', async () => {
+
+async function atualizafoto() {
  
   form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -84,7 +94,6 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 
           console.log("Iniciando manipulação da mensagem");
-
           setTimeout(() => {
             console.log("Iniciando transição de opacidade");
             mensage.style.transition = "opacity 1s";
@@ -105,4 +114,65 @@ window.addEventListener('DOMContentLoaded', async () => {
         
     }
 });
-});
+}
+
+
+atualizafoto()
+
+
+// TROCAR NOME DE USUARIO
+
+
+async function trocadenome() {
+const inpNewName = document.querySelector('.newName');
+let formName = document.querySelector('.trocadenome');
+let btnName = document.querySelector('.trocanome');
+
+btnName.addEventListener('click', () => {
+
+
+formName.addEventListener('submit', async(e)=>{
+  e.preventDefault();
+  
+  const inf = await fetch('trocanome.php', {
+  method: 'POST',
+  body: new FormData(formName)
+  }).then(res => res.json());                   
+  console.log(inf);
+
+  if(inf.status == "success"){
+    nomeatualizado = inpNewName.value
+    document.querySelector('#user').innerHTML = nomeatualizado;
+  }
+
+})
+
+})
+}
+
+trocadenome();
+
+
+// MOSTRA COMPRAS
+
+
+async function pagamento() {
+var total = 0
+
+
+  const data = await fetch('mostrapagamento.php').then(response => response.json());
+  console.log(data);
+
+  data.forEach(p => {
+    document.querySelector('.compras').innerHTML += `
+      <div>
+        <p>Produto: ${p.nome_prod}</p>
+        <p>Preço: R$ ${p.preco_prod} </p>
+      </div>`;
+
+    });
+  
+
+  }
+
+  pagamento();
